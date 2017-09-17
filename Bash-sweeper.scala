@@ -59,7 +59,6 @@ object Game {
         private val m_bombCount = 99
         private var m_cursorPos = Coord(0, 0)
 
-
         private val m_board: List[List[Tile]] = {
             var tempBoard =
                 Random.shuffle(
