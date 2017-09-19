@@ -59,6 +59,7 @@ object Game {
         private val m_bombCount = 99
         private var m_cursorPos = Coord(0, 0)
 
+
         private val m_board: List[List[Tile]] = {
             var tempBoard =
                 Random.shuffle(
@@ -101,9 +102,9 @@ object Game {
 
         def bombsLeft: Int = {
             m_bombCount - 
-                m_board.flatten count { tile => 
+                (m_board.flatten count { tile => 
                     tile.marked && tile.covered
-                }
+                })
         }
 
         def uncover(tile: Tile): Unit = {
